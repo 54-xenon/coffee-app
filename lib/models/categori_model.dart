@@ -16,31 +16,16 @@ class CategoriModel {
   // ここから下はよく分から
   static List<CategoriModel> getCategories() {
     
-    List<CategoriModel> Categoris = [];
+    List<CategoriModel> categoris = [];
 
-    Categoris.add(
+    categoris.add(
       CategoriModel(
         name: 'Ice',
-        iconPath: ,
+        iconPath: 'images/IceCoffee.jpeg',
         boxColor: Color(0xFF00B0FF),
       )
     );
-
-    Categoris.add(
-      CategoriModel(
-        name: 'Hot',
-        iconPath: ,
-        boxColor: Color(0xFFFF6F00),
-      )
-    );
-    Categoris.add(
-      CategoriModel(
-        name: 'take out only',
-        iconPath: ,
-        boxColor: Color(0xFFCDDC39),
-      )
-    );
     
-    return Categoris;
+    return categoris;
   }
 }

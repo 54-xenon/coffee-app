@@ -1,4 +1,5 @@
 import 'package:coffee_app/pages/home_page.dart';
+import 'package:coffee_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class staartpage extends StatelessWidget {
@@ -89,7 +90,7 @@ class staartpage extends StatelessWidget {
               padding: const EdgeInsets.all(25),
               child: GestureDetector(
                 onTap: () {
-                  
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                 },
                 child: Center(
                   child: Text(

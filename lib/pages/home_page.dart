@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 15),
           Container(
-            height: 200,
+            height: 120,
             child: ListView.separated(
               // スクロール方向を横並びにする
                 scrollDirection: Axis.horizontal,
@@ -57,18 +57,27 @@ class _HomePageState extends State<HomePage> {
                   return Container(
                     // カテゴリUIを戻り値にする
                     // モデルデータから引っ張ったやつ
-                    width: 200,
+                    width: 100,
                     decoration: BoxDecoration(
-                      color: categoris[index].boxColor.withValues(alpha: 0.6),
+                      color: categoris[index].boxColor.withValues(alpha: 0.4),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         // images
                         Container(
                           width: 70,
                           height: 70,
                           child: Image.asset(categoris[index].iconPath),
+                        ),
+                        Text(
+                          categoris[index].name,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
                         )
                         // categoris text
                       ],

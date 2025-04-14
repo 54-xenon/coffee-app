@@ -85,6 +85,10 @@ class staartpage extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.black,
+                border: Border.all(
+                  color: Colors.white,
+                  width: 2,
+                ),
                 borderRadius: BorderRadius.circular(15)
               ),
               padding: const EdgeInsets.all(25),

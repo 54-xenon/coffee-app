@@ -1,3 +1,4 @@
+import 'package:coffee_app/models/coffeeMenu_model.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,9 +11,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   // List<CategoriModel> categoris = [];
+  List<CoffeemenuModel> menu = [];
 
   void _getInfoMethod() {
-    
+     menu = CoffeemenuModel.getMenu();
   }
 
   @override

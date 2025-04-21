@@ -29,24 +29,21 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
             )
         ),
-        leading: Container(
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.menu,
-              color: Colors.white,
-            ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
           ),
         ),
+
+        // waa tapped cart page
         actions: [
-          Container(
-            child: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.shopping_cart_outlined,
-                color: Colors.white,
-                ),
-            ),
+          IconButton(
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: Colors.white,
+              ),
           )
         ],
         backgroundColor: Colors.grey[900],
@@ -58,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'Categoris',
+              'Menu',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -66,6 +63,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          // メニューのリスト
+          Container(
+
+          )
         ],
       ),
     );

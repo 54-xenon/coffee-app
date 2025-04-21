@@ -64,8 +64,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          // メニューのリスト
-          
+          // メニューのリスト -> ListViewを追加すると止まってしまう
+          Container(
+            height: 400,
+
+            color: Colors.green[300],
+            child: ListView.builder(
+              itemCount: menu.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(menu[index].name),
+                  
+                );
+              },
+              
+            ),
+          )
         ],
       ),
     );

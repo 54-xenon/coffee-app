@@ -37,9 +37,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
-        // waa tapped cart page
+        // waa tapped cart 
         actions: [
           IconButton(
+            onPressed: () {},
             icon: Icon(
               Icons.shopping_cart_outlined,
               color: Colors.white,
@@ -64,9 +65,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           // メニューのリスト
-          Container(
-
-          )
+          
         ],
       ),
     );

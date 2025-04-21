@@ -28,7 +28,7 @@ class CoffeemenuModel {
         name: 'IceCoffee',
         price: '200ドル',
         categories: 'Ice',
-        iconPath: '',
+        iconPath: 'images/IceCoffee.jpeg',
         leading: '短めの説明文',
         inventory: true,
       )

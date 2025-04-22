@@ -26,7 +26,7 @@ class CoffeemenuModel {
     menu.add(
       CoffeemenuModel(
         name: 'IceCoffee',
-        price: '200ドル',
+        price: '140円',
         categories: 'Ice',
         iconPath: 'images/IceCoffee.jpeg',
         leading: '短めの説明文',

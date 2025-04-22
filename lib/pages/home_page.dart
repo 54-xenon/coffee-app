@@ -10,12 +10,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   // List<CategoriModel> categoris = [];
   List<CoffeemenuModel> menu = [];
 
   void _getInfoMethod() {
-     menu = CoffeemenuModel.getMenu();
+    menu = CoffeemenuModel.getMenu();
   }
 
   @override
@@ -24,29 +23,22 @@ class _HomePageState extends State<HomePage> {
     _getInfoMethod();
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-            'Coffee Shop',
-            style: TextStyle(
-                color: Colors.white,
-            )
-        ),
+        title: const Text('Coffee Shop', style: TextStyle(color: Colors.white)),
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
+          icon: Icon(Icons.menu, color: Colors.white),
         ),
 
-        // waa tapped cart 
+        // waa tapped cart
         actions: [
           IconButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => CartPage())),
-            icon: Icon(
-              Icons.shopping_cart_outlined,
-              color: Colors.white,
-              ),
-          )
+            onPressed:
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CartPage()),
+                ),
+            icon: Icon(Icons.shopping_cart_outlined, color: Colors.white),
+          ),
         ],
         backgroundColor: Colors.grey[900],
         elevation: 0,
@@ -65,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          // メニューのリスト -> ListViewを追加すると止まってしまう
+          // menu list
           Container(
             height: 300,
             color: Colors.green[300],
@@ -74,12 +66,7 @@ class _HomePageState extends State<HomePage> {
               separatorBuilder: (context, index) => SizedBox(height: 10),
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(
-                    // 上のmenuとチグハグにならないように余白を調整
-                    left: 20,
-                    right: 20,
-                    top: 10,
-                  ),
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
                   child: Container(
                     height: 100,
                     decoration: BoxDecoration(
@@ -107,9 +94,29 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Text(
+              'favorite',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 26,
+              ),
+            ),
+          ),
+          // recommedn中身
+          Container(
+            height: 150,
+            decoration: BoxDecoration(
+              color: Colors.greenAccent
+            ),
+            child: ListView(
+              // この中に新しいリストを作る
+            ),
+          ),
         ],
       ),
     );

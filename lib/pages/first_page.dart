@@ -23,7 +23,7 @@ class staartpage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 15),
           Text(
             'Coffee App',
             style: TextStyle(
@@ -64,13 +64,22 @@ class staartpage extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Center(
-                  child: Text(
-                    'Start Now',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.start
+                      ),
+                      SizedBox(width: 3),
+                      Text(
+                        'Start Now',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -97,13 +106,23 @@ class staartpage extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                 },
                 child: Center(
-                  child: Text(
-                    'log in',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.login,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 3),
+                      Text(
+                        'log in',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
